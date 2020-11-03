@@ -9,7 +9,6 @@ import VueRouter from 'vue-router'
 import Index from './Index'
 import auth from './auth'
 import router from './router'
-
 // Set Vue globally
 window.Vue = Vue
 

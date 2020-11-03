@@ -91,17 +91,6 @@
                                 <has-error :form="form" field="password"></has-error>
                             </div>
 
-                            <!--div class="form-group">
-                                <select name="type" v-model="form.type" id="type" class="form-control"
-                                        :class="{ 'is-invalid': form.errors.has('type') }">
-                                    <option value="">Select User Role</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="user">Standard User</option>
-                                    <option value="author">Author</option>
-                                </select>
-                                <has-error :form="form" field="type"></has-error>
-                            </div-->
-
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -128,7 +117,6 @@
                     email: '',
                     password: '',
                     type: '',
-
                 })
             }
         },
