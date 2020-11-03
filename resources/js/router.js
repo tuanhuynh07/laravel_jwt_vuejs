@@ -6,7 +6,7 @@ import About from './pages/About'
 import Register from './pages/register'
 import Login from './pages/login'
 import Dashboard from './pages/user/Dashboard'
-
+import Users from './admin/User'
 // Routes
 const routes = [
     {
@@ -46,6 +46,15 @@ const routes = [
         path: '/dashboard',
         name: 'dashboard',
         component: Dashboard,
+        meta: {
+            auth: true
+        }
+    },
+    // USER ROUTES
+    {
+        path: '/users',
+        name: 'users',
+        component: Users,
         meta: {
             auth: true
         }

@@ -36,4 +36,7 @@ Route::prefix('v1')->group(function () {
             Route::post('logout', 'AuthController@logout');
         });
     });
+    Route::get('users', 'UserController@index');
+    Route::post('users', 'UserController@store');
+    Route::delete("users/{id}","UserController@destroy");
 });

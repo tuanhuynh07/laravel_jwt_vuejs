@@ -11,6 +11,8 @@ class AuthController extends Controller
 {
     /**
      * Register a new user
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function register(Request $request)
     {
@@ -35,6 +37,8 @@ class AuthController extends Controller
 
     /**
      * Login user and return a token
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request)
     {
@@ -46,7 +50,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Logout User
+     * @return \Illuminate\Http\JsonResponse
      */
     public function logout()
     {
@@ -59,6 +63,8 @@ class AuthController extends Controller
 
     /**
      * Get authenticated user
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function user(Request $request)
     {
@@ -70,7 +76,8 @@ class AuthController extends Controller
     }
 
     /**
-     * Refresh JWT token
+     *  Refresh JWT token
+     * @return \Illuminate\Http\JsonResponse
      */
     public function refresh()
     {
@@ -84,6 +91,7 @@ class AuthController extends Controller
 
     /**
      * Return auth guard
+     * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
      */
     private function guard()
     {
