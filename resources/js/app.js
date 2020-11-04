@@ -1,5 +1,7 @@
+//Bootstrap
+require('bootstrap')
+//bootstrap.js
 require('./bootstrap');
-
 import 'es6-promise/auto'
 import axios from 'axios'
 import Vue from 'vue'
@@ -9,6 +11,10 @@ import VueRouter from 'vue-router'
 import Index from './Index'
 import auth from './auth'
 import router from './router'
+import jQuery from 'jquery'
+
+window.$ = jQuery
+
 // Set Vue globally
 window.Vue = Vue
 
@@ -23,6 +29,7 @@ require('./customEvents');
 
 //Import Sweetalert2
 import Swal from 'sweetalert2'
+
 window.Swal = Swal
 const Toast = Swal.mixin({
     toast: true,
@@ -38,7 +45,8 @@ const Toast = Swal.mixin({
 window.Toast = Toast
 
 //Import v-from
-import { Form, HasError, AlertError } from 'vform'
+import {Form, HasError, AlertError} from 'vform'
+
 window.Form = Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
